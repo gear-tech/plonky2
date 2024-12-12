@@ -39,8 +39,8 @@ plonky2_maybe_rayon = { path = "../maybe_rayon", default-features = false }
 plonky2_util = { path = "../util", default-features = false }
 
 
-[target.'cfg(all(target_arch = "wasm32", target_os = "unknown"))'.dependencies]
-getrandom = { version = "0.2", default-features = false, features = ["js"] }
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+getrandom = { version = "0.2", default-features = false, features = ["custom"] }
 
 [dev-dependencies]
 criterion = { version = "0.5.1", default-features = false }
