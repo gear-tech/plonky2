@@ -526,7 +526,7 @@ impl<F: RichField + Extendable<D>, const D: usize> CommonCircuitData<F, D> {
             ..self.num_zs_partial_products_polys() + i * self.num_lookup_polys + 2
     }
 
-    pub(crate) fn get_fri_instance(&self, zeta: F::Extension) -> FriInstanceInfo<F, D> {
+    pub fn get_fri_instance(&self, zeta: F::Extension) -> FriInstanceInfo<F, D> {
         // All polynomials are opened at zeta.
         let zeta_batch = FriBatchInfo {
             point: zeta,

@@ -6,7 +6,7 @@ use crate::plonk::circuit_data::CommonCircuitData;
 use crate::plonk::config::GenericConfig;
 use crate::plonk::proof::{OpeningSet, Proof, ProofWithPublicInputs};
 
-pub(crate) fn validate_proof_with_pis_shape<F, C, const D: usize>(
+pub fn validate_proof_with_pis_shape<F, C, const D: usize>(
     proof_with_pis: &ProofWithPublicInputs<F, C, D>,
     common_data: &CommonCircuitData<F, D>,
 ) -> anyhow::Result<()>

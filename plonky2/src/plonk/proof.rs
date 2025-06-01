@@ -348,7 +348,7 @@ impl<F: RichField + Extendable<D>, const D: usize> OpeningSet<F, D> {
                 .to_vec(),
         }
     }
-    pub(crate) fn to_fri_openings(&self) -> FriOpenings<F, D> {
+    pub fn to_fri_openings(&self) -> FriOpenings<F, D> {
         let has_lookup = !self.lookup_zs.is_empty();
         let zeta_batch = if has_lookup {
             FriOpeningBatch {

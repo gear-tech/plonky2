@@ -42,7 +42,7 @@ pub struct FriInitialTreeProof<F: RichField, H: Hasher<F>> {
 }
 
 impl<F: RichField, H: Hasher<F>> FriInitialTreeProof<F, H> {
-    pub(crate) fn unsalted_eval(&self, oracle_index: usize, poly_index: usize, salted: bool) -> F {
+    pub fn unsalted_eval(&self, oracle_index: usize, poly_index: usize, salted: bool) -> F {
         self.unsalted_evals(oracle_index, salted)[poly_index]
     }
 
