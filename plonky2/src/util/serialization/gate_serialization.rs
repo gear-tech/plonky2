@@ -1,9 +1,10 @@
 //! A module to help with GateRef serialization
 
+// For macros below
 #[cfg(not(feature = "std"))]
-use alloc::vec::Vec;
+pub use alloc::vec::Vec;
 #[cfg(feature = "std")]
-use std::vec::Vec; // For macros below
+pub use std::vec::Vec;
 
 use plonky2_field::extension::Extendable;
 
